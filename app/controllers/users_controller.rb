@@ -1,13 +1,17 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
+  before_action :set_index_title, only: :index
+  before_action :set_show_title, only: :show
 
   # GET /users or /users.json
   def index
     @users = User.all
+    @index_title = "ユーザー一覧"
   end
 
   # GET /users/1 or /users/1.json
   def show
+
   end
 
   # GET /users/new
@@ -58,6 +62,13 @@ class UsersController < ApplicationController
   end
 
   private
+    def set_show_title
+      @show_title="ユーザー詳細"
+    end
+    
+    def set_index_title
+      @index_title="ユーザー一覧"
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
