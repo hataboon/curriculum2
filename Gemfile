@@ -48,6 +48,8 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem 'pry-byebug'
   gem "faker"
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem "factory_bot_rails"
   gem "rubocop"
   gem "rubocop-rails"
