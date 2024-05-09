@@ -11,7 +11,7 @@ class UsersController < ApplicationController
 
   # GET /users/1 or /users/1.json
   def show
-
+    @show_title="ユーザー詳細"
   end
 
   # GET /users/new
@@ -65,7 +65,7 @@ class UsersController < ApplicationController
     def set_show_title
       @show_title="ユーザー詳細"
     end
-    
+
     def set_index_title
       @index_title="ユーザー一覧"
     end
