@@ -35,4 +35,4 @@
 
 /node_modules
 
-Zone.Identifier
+spec/requests/*.rb:Zone.Identifier
