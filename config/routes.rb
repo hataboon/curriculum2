@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   root 'top#index'
 
   resources :welcomes, only: :index
+  resource :login, only: [:new, :create] 
+  get '/logout', to: 'logouts#show', as: 'logout'
 end
