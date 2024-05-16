@@ -9,7 +9,7 @@ class TasksController < ApplicationController
 
   # GET /tasks/1
   def show
-    @show_title="タスク詳細"
+    
   end
 
   # GET /tasks/new

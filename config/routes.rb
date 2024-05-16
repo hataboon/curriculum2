@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   resources :users
+  resources :tasks
   root 'top#index'
-
-  resources :welcomes, only: :index
-  resource :login, only: [:new, :create] 
-  get '/logout', to: 'logouts#show', as: 'logout'
+  resource :login, only: %i[ new create ]
+  resource :logout, only: %i[ show ]
+  get '/welcomes', to: 'welcomes#index'
 end
+
